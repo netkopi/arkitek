@@ -50,6 +50,9 @@ projectsDetails.forEach(project => {
 
 
 // SCRIPT FOR MAP //
+let isTwoFingerTouch = false
+
+
 const map = L.map('map', {
   center: [14.17025, 121.24181], // Los Baños
   zoom: 14,
@@ -71,3 +74,17 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
 const marker = L.marker([14.17025, 121.24181]).addTo(map)
   .bindPopup(`<b>Hello!</b><br>This is Los Baños Laguna.`)
   .openPopup();
+
+map.on('touchstart', (e) => {
+  if(e.originalEvent.touches.length === 2){
+    isTwoFingerTouch = true
+    map.dragging.enable()
+  } else {
+    isTwoFingerTouch = false
+    map.dragging.disable()
+  }
+})
+
+map.on('touchend', () => {
+  map.dragging.disable()
+})
