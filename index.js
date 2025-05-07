@@ -1,11 +1,11 @@
-/* const scroll = new LocomotiveScroll({
+const scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
     smooth: true,
     lerp: .00007,
     multiplier: 3,
   });
 
- */
+
 
 
 
@@ -64,7 +64,7 @@ projectsDetails.forEach(project => {
 
 
 
-/* // SCRIPT FOR MAP //
+// SCRIPT FOR MAP //
 let isTwoFingerTouch = false
 
 
@@ -102,4 +102,4 @@ map.on('touchstart', (e) => {
 
 map.on('touchend', () => {
   map.dragging.disable()
-}) */
+})
