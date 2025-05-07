@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+.container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.header {
+    width: 100%;
+    position: relative;
+    top: 0;
+    z-index: 2;
+    background-color: #fff;
+}
+.header .container {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.header .logo {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+.header span {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.header nav {
+    display: none;
+    gap: 20px;
+}
+.header a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    color: #000;
+}
+.header .cta {
+    background-color: #222;
+    color: #fff;
+}
+
+
+.hero {
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+}
+.hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    left: 0;
+    top: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.hero > div {
+    width: 100%;
+    height: 100%;
+    background: rgb(0 0 0 / 70%);
+    position: relative;
+    z-index: 1;
+}
+.hero .content {
+    width: max(300px, 100%);
+    max-width: 600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    color: #fff;
+    padding: 0 20px;
+}
+.hero p {
+    letter-spacing: 10px;
+}
+.hero h1 {
+    font-size: clamp(36px, 8vw, 48px);
+    text-transform: capitalize;
+}
+
+
+.about {
+    padding: 100px 20px;
+}
+.about .container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+.about .img-container {
+    width: max(300px, 100%);
+    max-width: 800px;
+    height: clamp(300px, 80vw, 600px);
+    overflow: hidden;
+}
+.about img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.about .content {
+    width: max(300px, 100%);
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.about .content > span {
+    display: flex;
+    letter-spacing: 10px;
+}
+.about .content h1 {
+    text-transform: uppercase;
+    font-size: clamp(24px, 5vw, 36px);
+    position: relative;
+    padding-bottom: 20px;
+}
+.about .content h1::after {
+    content: "";
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    border-bottom: 3px solid goldenrod;
+}
+.about p {
+    font-size: 12px;
+    line-height: 20px;
+}
+.about .links {
+    display: flex;
+    gap: 20px;
+}
+.about .links > a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    border: 1px solid #222;
+    color: #222;
+}
+.about .cta {
+    color: #fff !important;
+    border: none !important;
+    background-color: #222;
+    position: relative;
+    overflow: hidden;
+}
+.about .cta span {
+    color: #fff;
+    display: flex;
+    pointer-events: none;
+    position: relative;
+    z-index: 2;
+}
+.about .cta::after {
+    content: "";
+    width: 150%;
+    height: 0%;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    z-index: 1;
+    background-color: goldenrod;
+    transition: .5s ease-out;
+    border-radius: 50%;
+}
+.about .cta:hover::after {
+    height: 150%;
+}
+
+
+
+.services {
+    padding: 100px 20px;
+    height: 600px;
+    background-color: #222;
+}
+
+
+
+
+
+
+.works {
+    background-color: #fff;
+}
+.works .container {
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.works .container .heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.works .heading > div:first-child {
+    width: max(300px, 100%);
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+    position: relative;
+}
+.works .heading > div:first-child::after {
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    border-bottom: 3px solid goldenrod;
+}
+.works .heading span {
+    letter-spacing: 10px;
+}
+.works .heading p {
+    font-size: 12px;
+    line-height: 20px;
+    color: #222;
+}
+.projects {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.projects .project {
+    width: max(300px, 100%);
+    max-width: 400px;
+    height: 400px;
+}
+.projects .img-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+.projects img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.projects .content {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.projects span {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.projects .project p {
+    font-size: 12px;
+    line-height: 20px;
+}
+.projects .project a {
+    text-decoration: none;
+    color: #fff;
+    background-color: goldenrod;
+    padding: 10px;
+    font-size: 12px;
+    width: fit-content;
+    display: flex;
+    margin-top: 20px;
+}
+.works .heading a {
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid #222;
+    color: #222;
+    padding: 10px;
+    display: flex;
+}
+
+
+.map {
+    width: 100%;
+    height: 500px;
+    background-color: #ddd;
+}
+
+.footer {
+    background-color: #222;
+    padding: 100px 20px 0px 20px;
+}
+.footer .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.footer .top {
+    height: 350px;
+}
+.footer .bottom {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 12px;
+}
+.footer hr {
+    width: 100%;
+    color: #fff;
+}
+
+
+
+@media (min-width: 1024px){
+    .about .container {
+        flex-wrap: nowrap;
+    }
+}
+@media (min-width: 800px){
+    nav {
+        display: flex !important;
+    }
+}
