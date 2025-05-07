@@ -60,7 +60,7 @@ const map = L.map('map', {
   scrollWheelZoom: false,
   doubleClickZoom: false,
   touchZoom: false,
-  dragging: true
+  dragging: false
 });
 
 // Clean tile style

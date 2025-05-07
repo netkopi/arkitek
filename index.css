@@ -160,7 +160,7 @@ body {
 }
 .about .content h1::after {
     content: "";
-    width: 30%;
+    width: 100px;
     height: 100%;
     position: absolute;
     left: 0;
@@ -230,7 +230,6 @@ body {
     flex-direction: column;
     gap: 20px; 
     padding: 10px;
-    /* background-color: #f0f0f0; */
 }
 .about .stats span {
     font-weight: 600;
@@ -241,18 +240,56 @@ body {
     height: 30px;
 }
 
+
+
 .services {
     padding: 100px 20px;
-    height: 600px;
     background-color: #222;
+}
+.services .container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 .services .heading span {
     color: #fff;
     display: flex;
 }
-
-
-
+.services .heading {
+    width: max(300px, 100%);
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    padding-bottom: 20px;
+}
+.services .heading p {
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+}
+.services .heading::after {
+    content: "";
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    border-bottom: 3px solid goldenrod;
+}
+.services .process {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+.services .process .step {
+    width: max(300px, 100%);
+    max-width: 400px;
+    height: 300px;
+    background-color: #333;
+}
 
 
 .works {
@@ -283,7 +320,7 @@ body {
 }
 .works .heading > div:first-child::after {
     content: "";
-    width: 50%;
+    width: 100px;
     height: 100%;
     position: absolute;
     left: 0;
@@ -399,7 +436,7 @@ body {
     nav {
         display: flex !important;
     }
-    .about .stats {
+    .about .stats, .services .process {
         flex-wrap: nowrap !important;
     }
 }
