@@ -17,13 +17,13 @@ body {
 
 .header {
     width: 100%;
-    position: relative;
+    position: absolute;
     top: 0;
     z-index: 2;
     background-color: #fff;
 }
 .header .container {
-    height: 50px;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,6 +54,7 @@ body {
 }
 .header a {
     text-decoration: none;
+    text-transform: uppercase;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,7 +71,7 @@ body {
 
 .hero {
     width: 100%;
-    height: 700px;
+    height: 800px;
     overflow: hidden;
     position: relative;
 }
@@ -118,6 +119,40 @@ body {
     line-height: 20px;
 }
 
+.stats {
+    padding: 100px 20px;
+    width: 100%;
+    background-color: #222;
+}
+.stats .container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap !important;
+}
+.stats .container > div {
+    width: max(200px, 100%);
+    min-height: 200px; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    padding: 10px;
+    color: #fff;
+}
+.stats span {
+    font-weight: 600;
+    font-size: 24px;
+    color: goldenrod;
+}
+.stats p {
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 20px;
+}
+.stats .icon svg {
+    width: 30px;
+    height: 30px;
+}
+
 
 .about {
     padding: 100px 20px;
@@ -149,6 +184,7 @@ body {
     min-height: 600px;
 }
 .about .content > span {
+    font-size: 18px;
     display: flex;
     letter-spacing: 10px;
 }
@@ -169,22 +205,27 @@ body {
     border-bottom: 3px solid goldenrod;
 }
 .about p {
-    font-size: 12px;
-    line-height: 20px;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 29px;
 }
 .about .links {
     display: flex;
     gap: 20px;
+}
+.about .links svg {
+    width: 30px;
+    height: 30px;
 }
 .about .links > a {
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
     height: 50px;
     border: 1px solid #222;
-    color: #222;
+    color: #000;
+    padding: 20px;
 }
 .about .cta {
     color: #fff !important;
@@ -193,12 +234,13 @@ body {
     position: relative;
     overflow: hidden;
 }
-.about .cta span {
-    color: #fff;
+.about span {
     display: flex;
+    align-items: center;
     pointer-events: none;
     position: relative;
     z-index: 2;
+    gap: 10px;
 }
 .about .cta::after {
     content: "";
@@ -216,35 +258,14 @@ body {
 .about .cta:hover::after {
     height: 150%;
 }
-.about .stats {
-    margin-top: 70px;
-    width: 100%;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap !important;
-}
-.about .stats > div {
-    width: max(200px, 100%);
-    min-height: 200px; 
-    display: flex;
-    flex-direction: column;
-    gap: 20px; 
-    padding: 10px;
-}
-.about .stats span {
-    font-weight: 600;
-    font-size: 18px;
-}
-.about .icon svg {
-    width: 30px;
-    height: 30px;
-}
+
 
 
 
 .services {
     padding: 100px 20px;
     background-color: #222;
+    overflow: hidden;
 }
 .services .container {
     display: flex;
@@ -252,8 +273,10 @@ body {
     gap: 50px;
 }
 .services .heading span {
+    font-size: 18px;
     color: #fff;
     display: flex;
+    letter-spacing: 10px;
 }
 .services .heading {
     width: max(300px, 100%);
@@ -266,8 +289,8 @@ body {
 }
 .services .heading p {
     color: #fff;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 29px;
 }
 .services .heading::after {
     content: "";
@@ -279,16 +302,59 @@ body {
     z-index: 1;
     border-bottom: 3px solid goldenrod;
 }
-.services .process {
+.services .service-container {
     display: flex;
-    gap: 60px;
     flex-wrap: wrap;
+    gap: 15px;
 }
-.services .process .step {
+.services .service-container .service {
     width: max(300px, 100%);
-    max-width: 400px;
-    height: 300px;
+    max-width: 430px;
     background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.service .img-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.service img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.service .content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.service svg {
+    width: 30px;
+    height: 30px;
+}
+.service span {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: goldenrod;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.services ul {
+    padding-left: 10px;
+}
+.services :where(p, li) {
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 29px;
+}
+.services li {
+    text-transform: capitalize;
 }
 
 
@@ -329,11 +395,12 @@ body {
     border-bottom: 3px solid goldenrod;
 }
 .works .heading span {
+    font-size: 18px;
     letter-spacing: 10px;
 }
 .works .heading p {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 29px;
     color: #222;
 }
 .projects {
@@ -345,7 +412,7 @@ body {
 .projects .project {
     width: max(300px, 100%);
     max-width: 400px;
-    height: 400px;
+    height: 500px;
 }
 .projects .img-container {
     width: 100%;
@@ -366,13 +433,16 @@ body {
     gap: 10px;
 }
 .projects span {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
 }
+.projects .project .year {
+    color: #555;
+}
 .projects .project p {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 29px;
 }
 .projects .project a {
     text-decoration: none;
@@ -436,7 +506,7 @@ body {
     nav {
         display: flex !important;
     }
-    .about .stats, .services .process {
+    .stats .container{
         flex-wrap: nowrap !important;
     }
 }

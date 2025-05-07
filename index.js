@@ -1,11 +1,11 @@
-const scroll = new LocomotiveScroll({
+/* const scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
     smooth: true,
     lerp: .00007,
     multiplier: 3,
   });
 
-
+ */
 
 
 
@@ -13,6 +13,21 @@ const scroll = new LocomotiveScroll({
 
 // PROJECT SECTION //
 const projectsDetails = [
+  {name: "International Rice Research Incorporation",
+    year: 2015,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+    imgSource: "project-01.jpg"
+  },
+  {name: "Olivarez Plaza Los Baños",
+    year: 2017,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+    imgSource: "project-02.jpg"
+  },
+  {name: "Los Baños Laguna National Hospital",
+    year: 2021,
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+    imgSource: "project-03.webp"
+  },
   {name: "International Rice Research Incorporation",
     year: 2015,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
@@ -39,7 +54,7 @@ projectsDetails.forEach(project => {
         </div>
         <div class="content">
             <span>${project.name}</span>
-            <p>Year ${project.year}</p>
+            <p class="year">Year ${project.year}</p>
             <p>${project.description}</p>
             <a href="">view more</a>
         </div>
@@ -49,7 +64,7 @@ projectsDetails.forEach(project => {
 
 
 
-// SCRIPT FOR MAP //
+/* // SCRIPT FOR MAP //
 let isTwoFingerTouch = false
 
 
@@ -87,4 +102,4 @@ map.on('touchstart', (e) => {
 
 map.on('touchend', () => {
   map.dragging.disable()
-})
+}) */
