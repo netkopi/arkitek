@@ -104,12 +104,18 @@ body {
     color: #fff;
     padding: 0 20px;
 }
-.hero p {
+.hero span {
     letter-spacing: 10px;
 }
 .hero h1 {
     font-size: clamp(36px, 8vw, 48px);
     text-transform: capitalize;
+    text-wrap: balance;
+}
+.hero p {
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 
@@ -140,6 +146,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    min-height: 600px;
 }
 .about .content > span {
     display: flex;
@@ -209,15 +216,40 @@ body {
 .about .cta:hover::after {
     height: 150%;
 }
-
-
+.about .stats {
+    margin-top: 70px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap !important;
+}
+.about .stats > div {
+    width: max(200px, 100%);
+    min-height: 200px; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    padding: 10px;
+    /* background-color: #f0f0f0; */
+}
+.about .stats span {
+    font-weight: 600;
+    font-size: 18px;
+}
+.about .icon svg {
+    width: 30px;
+    height: 30px;
+}
 
 .services {
     padding: 100px 20px;
     height: 600px;
     background-color: #222;
 }
-
+.services .heading span {
+    color: #fff;
+    display: flex;
+}
 
 
 
@@ -331,6 +363,7 @@ body {
     background-color: #ddd;
 }
 
+
 .footer {
     background-color: #222;
     padding: 100px 20px 0px 20px;
@@ -357,7 +390,7 @@ body {
 
 
 
-@media (min-width: 1024px){
+@media (min-width: 1200px){
     .about .container {
         flex-wrap: nowrap;
     }
@@ -365,5 +398,8 @@ body {
 @media (min-width: 800px){
     nav {
         display: flex !important;
+    }
+    .about .stats {
+        flex-wrap: nowrap !important;
     }
 }

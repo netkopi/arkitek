@@ -46,3 +46,28 @@ projectsDetails.forEach(project => {
     </div>
   `
 })
+
+
+
+// SCRIPT FOR MAP //
+const map = L.map('map', {
+  center: [14.17025, 121.24181], // Los Baños
+  zoom: 14,
+  zoomControl: true,
+  scrollWheelZoom: false,
+  doubleClickZoom: false,
+  touchZoom: false,
+  dragging: true
+});
+
+// Clean tile style
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; OpenStreetMap & CartoDB',
+  subdomains: 'abcd',
+  maxZoom: 19
+}).addTo(map);
+
+
+const marker = L.marker([14.17025, 121.24181]).addTo(map)
+  .bindPopup(`<b>Hello!</b><br>This is Los Baños Laguna.`)
+  .openPopup();
