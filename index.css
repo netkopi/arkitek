@@ -146,11 +146,12 @@ body {
 .stats p {
     font-weight: 100;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 29px;
 }
 .stats .icon svg {
     width: 30px;
     height: 30px;
+    color: goldenrod;
 }
 
 
@@ -214,8 +215,8 @@ body {
     gap: 20px;
 }
 .about .links svg {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
 }
 .about .links > a {
     text-decoration: none;
@@ -226,6 +227,7 @@ body {
     border: 1px solid #222;
     color: #000;
     padding: 20px;
+    font-size: 14px;
 }
 .about .cta {
     color: #fff !important;
@@ -315,23 +317,14 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-.service .img-container {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-}
-.service img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    position: relative;
 }
 .service .content {
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    position: relative;
 }
 .service svg {
     width: 30px;
@@ -346,7 +339,7 @@ body {
     gap: 20px;
 }
 .services ul {
-    padding-left: 10px;
+    padding-left: 50px;
 }
 .services :where(p, li) {
     font-weight: 100;
@@ -395,8 +388,10 @@ body {
     border-bottom: 3px solid goldenrod;
 }
 .works .heading span {
+    text-transform: uppercase;
     font-size: 18px;
     letter-spacing: 10px;
+    line-height: 29px;
 }
 .works .heading p {
     font-size: 14px;
@@ -462,6 +457,121 @@ body {
     padding: 10px;
     display: flex;
 }
+
+.contact-us {
+    background-color: #efefef;
+}
+.contact-us .container {
+    width: 100%;
+    padding: 100px 20px;
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+.contact-us .contacts {
+    background-color: #222;
+    color: #fff;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: max(300px, 100%);
+    max-width: 600px;
+}
+.contact-us .contacts span {
+    font-size: 18px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    line-height: 29px;
+}
+.contact-us .contacts p {
+    text-transform: capitalize;
+    font-size: 14px;
+    line-height: 29px;
+}
+.contacts svg {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+}
+.contacts .contact {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.contacts .heading {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+}
+.contacts .heading::after {
+    content: "";
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    border-bottom: 3px solid goldenrod;
+}
+.contact-form {
+    width: max(300px, 100%);
+    max-width: 600px;
+}
+.contact-form span {
+    font-size: 24px;
+    font-weight: 700;
+}
+.contact-form p {
+    font-size: 14px;
+    line-height: 29px;
+}
+.contact-form form {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    position: relative;
+}
+.contact-form form > div {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    width: 100%;
+}
+.contact-form div > input {
+    width: 50%;
+}
+.contact-form input {
+    font-size: 14px;
+    outline: none;
+    width: max(100px, 100%);
+    max-width: 600%;
+    padding: 15px;
+    border: none;
+}
+.contact-form textarea {
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+    padding: 15px;
+    height: 200px;
+    resize: none;
+    border: none;
+}
+.contact-form input[type="submit"] {
+    background-color: goldenrod;
+    color: #fff;
+    font-size: 14px;
+    width: 150px;
+    border: none;
+}
+
 
 
 .map {

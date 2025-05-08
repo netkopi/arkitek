@@ -28,21 +28,6 @@ const projectsDetails = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
     imgSource: "project-03.webp"
   },
-  {name: "International Rice Research Incorporation",
-    year: 2015,
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-    imgSource: "project-01.jpg"
-  },
-  {name: "Olivarez Plaza Los Baños",
-    year: 2017,
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-    imgSource: "project-02.jpg"
-  },
-  {name: "Los Baños Laguna National Hospital",
-    year: 2021,
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-    imgSource: "project-03.webp"
-  },
 ]
 const projectContainer = document.querySelector('.projects')
 
