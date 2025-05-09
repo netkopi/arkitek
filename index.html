@@ -24,11 +24,23 @@
                 <a href="#">Jun Torres</a>
             </div>
             <nav>
+                <a href="#" class="active">home</a>
                 <a href="">about</a>
                 <a href="">services</a>
-                <a href="">works</a>
+                <a href="projects/view-projects.html?id=1">projects</a>
                 <a href="" class="cta">contact me</a>
             </nav>
+            <label for="menu-button" class="menu-button-label">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentcolor"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            </label>
+            <input type="checkbox" class="menu-button" id="menu-button" hidden>
+            <div class="menu-bar">
+                <a href="#" class="active">home</a>
+                <a href="">about</a>
+                <a href="">services</a>
+                <a href="projects/view-projects.html?id=1">projects</a>
+                <a href="" class="cta">contact me</a>
+            </div>
         </div>
     </div>
     
@@ -211,7 +223,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et doore magna aliqua. Ut enum ad minim veriam, quis nostrud exercitaion ullamco laboris nidi ut alliquip ex ea commodo consequat.</p>
                 </div>
                 <div>
-                    <a href="">view all projects</a>
+                    <a href="projects/view-projects.html?id=1">view all projects</a>
                 </div>
             </div>
             <div class="projects">
@@ -263,7 +275,10 @@
         </div>
     </div>
 
-    <div class="map" id="map">
+    <div class="map home-map" id="map">
+        <input type="checkbox" id="drag-map" hidden>
+        <label for="drag-map" id="drag-map-label">drag disabled</label>
+        <button id="reset">center</button>
     </div>
 
     <div class="footer">

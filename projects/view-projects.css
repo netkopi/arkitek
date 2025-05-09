@@ -1,0 +1,284 @@
+body {
+    background-color: #fff;
+}
+
+.menu-button-label {
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+}
+.menu-button-label svg {
+    width: 30px;
+    height: 30px;
+}
+.menu-button {
+    display: none;
+    border: solid;
+}
+.menu-bar {
+    position: absolute;
+    top: -300px;
+    left: 0;
+    height: 300px;
+    width: 100vw;
+    background-color: #efefef;
+    transition: top .3s ease;
+    z-index: -1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: left;
+}
+.menu-bar a {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    position: relative;
+}
+.menu-bar a.active {
+    background-color: goldenrod;
+    color: #fff;
+}
+.menu-bar a.active::after {
+    content: "";
+    display: none;
+}
+:is(.menu-button:checked) + .menu-bar {
+    top: 80px;
+}
+
+
+.main {
+    width: 100%;
+    margin-top: 80px;
+}
+.main .map {
+    width: 100%;
+    height: 500px;
+}
+.main .img-container {
+    width: max(300px, 100%);
+    max-width: 800px;
+}
+.main .container {
+    width: 100%;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+}
+.main .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.main .project-description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+.main .project-description > div:first-child {
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+.main .details {
+    width: max(300px, 100%);
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.main .project-description .description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  
+}
+.main .project-name {
+    position: relative;
+    padding-bottom: 20px;
+}
+.main .project-name::after {
+    content: "";
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    border-bottom: 3px solid goldenrod;
+}
+.main .information > div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.main .information p {
+    text-transform: capitalize;
+}
+.main .project-description span {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 10px;
+}
+.main .project-description p {
+    font-size: 14px;
+    line-height: 29px;
+}
+.main .details a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    width: fit-content;
+}
+.main .details a svg {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.other-projects {
+    background-color: #efefef;
+}
+.other-projects .container {
+    position: relative;
+    width: 100%;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.other-projects .container .heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.other-projects .heading > div {
+    width: max(300px, 100%);
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+    position: relative;
+    z-index: 2;
+}
+.other-projects .heading > div::after {
+    content: "";
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    border-bottom: 3px solid goldenrod;
+}
+.other-projects .heading span {
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 10px;
+    line-height: 29px;
+}
+.other-projects .heading p {
+    font-size: 14px;
+    line-height: 29px;
+    color: #222;
+}
+.other-projects .other-projects-container {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.other-projects .project {
+    width: max(300px, 100%);
+    max-width: 400px;
+    height: 500px;
+}
+.other-projects .img-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+.other-projects img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.other-projects .content {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.other-projects span {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.other-projects .project .year {
+    color: #555;
+}
+.other-projects .project p {
+    font-size: 14px;
+    line-height: 29px;
+}
+.other-projects .project a {
+    text-decoration: none;
+    color: #fff;
+    background-color: goldenrod;
+    padding: 10px;
+    font-size: 12px;
+    width: fit-content;
+    display: flex;
+    margin-top: 20px;
+}
+
+
+
+
+.footer {
+    background-color: #222;
+    width: 100%;
+    height: 500px;
+}
+
+
+@media (min-width: 1200px){
+    .about .container {
+        flex-wrap: nowrap;
+    }
+    .main .project-description > div:first-child {
+        flex-wrap: nowrap;
+    }
+    .main .project-description .description {
+
+    }
+}
+@media (min-width: 800px){
+    nav {
+        display: flex !important;
+    }
+    .stats .container{
+        flex-wrap: nowrap !important;
+    }
+}
