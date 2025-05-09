@@ -647,14 +647,19 @@ a.active::after {
     position: relative;
     outline: none;
 }
+.map :where(button svg, label svg) {
+    width: 30px;
+    height: 30px;
+}
 .map #reset {
     font-size: 14px;
     position: absolute;
     left: 20px;
-    bottom: 70px;
+    bottom: 80px;
     z-index: 1000;
-    height: 40px;
-    width: 150px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
     text-transform: capitalize;
     cursor: pointer;
     background-color: #fff;
@@ -664,6 +669,7 @@ a.active::after {
     justify-content: center;
     border: none;
     box-shadow: 0 10px 10px 0px rgb(0 0 0 / 10%);
+    color: red;
 }
 .map label {
     font-size: 14px;
@@ -671,8 +677,9 @@ a.active::after {
     left: 20px;
     bottom: 20px;
     z-index: 1001;
-    height: 40px;
-    width: 150px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
     text-transform: capitalize;
     cursor: pointer;
     background-color: #fff;

@@ -30,18 +30,32 @@ projectsDetails.forEach(project => {
             doubleClickZoom: false,
             touchZoom: false,
             dragging: false // Initially off
-          })
-          
-          // Add tile layer and marker
-          L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            })
+            
+            // Add tile layer and marker
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
             attribution: '&copy; OpenStreetMap & CartoDB',
             subdomains: 'abcd',
             maxZoom: 19
-          }).addTo(map)
-          
-          L.marker(project.coordinates).addTo(map)
+            }).addTo(map)
+            
+            L.marker(project.coordinates).addTo(map)
             .bindPopup(`<b>Hello!</b><br>This is ${project.name}.`)
             .openPopup()
+
+            dragButtonCheckbox.addEventListener('change', () => {
+                if (dragButtonCheckbox.checked) {
+                map.dragging.enable()
+                } else {
+                map.dragging.disable()
+                }
+            })
+            
+            if(resetMapViewButton){
+                resetMapViewButton.addEventListener('click', () => {
+                map.setView(project.coordinates, 14);
+                })
+            }
     }
 
 })

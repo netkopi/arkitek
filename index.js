@@ -114,18 +114,15 @@ if(document.querySelector('.home-map')){
   // Toggle drag dynamically
   dragButtonCheckbox.addEventListener('change', () => {
     if (dragButtonCheckbox.checked) {
-      dragButtonCheckboxLabel.textContent = "drag enabled"
       map.dragging.enable()
     } else {
-      dragButtonCheckboxLabel.textContent = "drag disabled"
       map.dragging.disable()
     }
   })
   
-}
-
-if(resetMapViewButton){
-  resetMapViewButton.addEventListener('click', () => {
-    map.setView([14.17025, 121.24181], 14);
-  })
+  if(resetMapViewButton){
+    resetMapViewButton.addEventListener('click', () => {
+      map.setView([14.17025, 121.24181], 14);
+    })
+  }
 }
