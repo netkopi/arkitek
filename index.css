@@ -34,10 +34,12 @@ a.active::after {
     width: 100%;
     position: absolute;
     top: 0;
-    z-index: 2;
+    z-index: 1001;
     background-color: #fff;
 }
 .header .container {
+    z-index: 1000;
+    position: relative;
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -99,18 +101,19 @@ a.active::after {
 }
 .menu-bar {
     position: absolute;
-    top: -300px;
+    top: 80px;
     left: 0;
-    height: 300px;
+    height: 0px;
     width: 100vw;
     background-color: #efefef;
-    transition: top .3s ease;
+    transition: .3s ease;
     z-index: -1;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: left;
+    overflow: hidden;
+    padding: 0 20px;
 }
 .menu-bar a {
     width: 100%;
@@ -128,7 +131,8 @@ a.active::after {
     display: none;
 }
 :is(.menu-button:checked) + .menu-bar {
-    top: 80px;
+    height: 300px;
+    padding: 20px !important;
 }
 
 .hero {
@@ -653,27 +657,31 @@ a.active::after {
     width: 150px;
     text-transform: capitalize;
     cursor: pointer;
-    background-color: #ddd;
+    background-color: #fff;
     border: 1px solid;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
+    box-shadow: 0 10px 10px 0px rgb(0 0 0 / 10%);
 }
 .map label {
     font-size: 14px;
     position: absolute;
     left: 20px;
     bottom: 20px;
-    z-index: 1000;
+    z-index: 1001;
     height: 40px;
     width: 150px;
     text-transform: capitalize;
     cursor: pointer;
-    background-color: #ddd;
+    background-color: #fff;
     border: 1px solid;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
+    box-shadow: 0 10px 10px 0px rgb(0 0 0 / 10%);
 }
 .map :is(input[type="checkbox"]:checked) + label {
     background-color: limegreen;

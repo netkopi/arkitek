@@ -4,13 +4,15 @@ const yearText = document.querySelector('.year')
 const coordinatesText = document.querySelector('.coordinates')
 const imageElement = document.querySelector('img.image')
 const descriptionText = document.querySelector('.descriptionText')
+const googleMapsLink = document.querySelector('.search-google-maps')
 
 const searchParam = new URLSearchParams(window.location.search)
 const id = searchParam.get('id')
 
 
-projectsDetails.forEach(project => {
 
+
+projectsDetails.forEach(project => {
     if(project.id == id){
         projectNameText.textContent = project.name
         addressText.textContent = project.address
@@ -18,6 +20,7 @@ projectsDetails.forEach(project => {
         coordinatesText.textContent = project.coordinates
         imageElement.src = `../images/${project.imgSource}`
         descriptionText.textContent = project.description
+        googleMapsLink.href = `https://www.google.com/maps/search/?api=1&query=${project.coordinates[0]},${project.coordinates[1]}`
         
         const map = L.map('map', {
             center: project.coordinates, // Los Baños
@@ -43,20 +46,35 @@ projectsDetails.forEach(project => {
 
 })
 
-
 const otherProjectsContainer = document.querySelector('.other-projects-container')
-projectsDetails.forEach(project =>{
-    otherProjectsContainer.innerHTML += `
-        <div class="project">
-            <div class="img-container">
-                <img src="../images/${project.imgSource}" alt="">
+const pagination = document.querySelector('.pagination')
+
+function changePage(index){
+    otherProjectsContainer.innerHTML = "";
+    pagination.innerHTML = ""
+
+    let paginationCurrentIndex = index
+    projects[paginationCurrentIndex].forEach(project =>{
+        otherProjectsContainer.innerHTML += `
+            <div class="project">
+                <div class="img-container">
+                    <img src="../images/${project.imgSource}" alt="">
+                </div>
+                <div class="content">
+                    <span>${project.name}</span>
+                    <p class="year">Year ${project.year}</p>
+                    <p>${project.overview}</p>
+                    <a href="view-projects.html?id=${project.id}">view more</a>
+                </div>
             </div>
-            <div class="content">
-                <span>${project.name}</span>
-                <p class="year">Year ${project.year}</p>
-                <p>${project.overview}</p>
-                <a href="view-projects.html?id=${project.id}">view more</a>
-            </div>
-        </div>
-    `
-})
+        `
+    })
+    projects.forEach((page, i) => {
+        let isActive = paginationCurrentIndex == i ? 'active' : 'inactive'
+        pagination.innerHTML += `
+            <button class="pagination-page ${isActive}" onclick="changePage(${i})">${i + 1}</button>
+        `
+    })
+}
+changePage(0)
+
