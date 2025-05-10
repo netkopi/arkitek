@@ -1,0 +1,7 @@
+.main .head .map {
+    height: 500px;
+}
+.main .head > div:last-child {
+    background-color: #fff;
+    height: 500px;
+}
