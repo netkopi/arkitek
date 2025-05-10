@@ -1,7 +1,195 @@
 .main .head .map {
     height: 500px;
+    filter: brightness(.9);
 }
-.main .head > div:last-child {
+
+
+.main .container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 100px 20px;
+    position: relative;
+    z-index: 1000;
+}
+.main .profile {
+    position: relative;
+    top: -100px;
     background-color: #fff;
-    height: 500px;
+    box-shadow: 0 -10px 0 0 rgb(0 0 0 / 10%);
+    padding: 20px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.main .personal-information {
+    width: max(300px, 100%);
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.main .personal-information span {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    line-height: 29px;
+}
+.main .personal-information h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 20px;
+    text-wrap: balance;
+}
+.main .personal-information h1::after {
+    content: "";
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    border-bottom: 3px solid goldenrod;
+}
+.main .personal-information h1 + p {
+    text-transform: uppercase;
+}
+.main .personal-information p {
+    font-size: 14px;
+    line-height: 29px;
+}
+.main .personal-information .socials {
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: last baseline;
+    padding: 20px 0;
+}
+.main .personal-information .social {
+    background-color: #ddd;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.main .profile .img-container {
+    width: max(300px, 100%);
+    max-width: 800px;
+    overflow: hidden;
+}
+.main .profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.main .more-about {
+    width: 100%;
+    padding: 100px 20px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.main .more-about .content {
+    width: max(300px, 100%);
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.main .more-about span {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    line-height: 29px;
+    position: relative;
+    padding-bottom: 20px;
+}
+.main .more-about span::after {
+    content: "";
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    border-bottom: 3px solid goldenrod;
+}
+.main .more-about p {
+    font-size: 14px;
+    line-height: 29px;
+}
+.main .more-about .img-container {
+    width: max(300px, 100%);
+    max-width: 800px;
+    overflow: hidden;
+    background-color: #ddd;
+}
+.main .more-about img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.main .about-school {
+    width: 100%;
+    padding: 100px 20px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    flex-flow: column-reverse;
+}
+.main .about-school .content {
+    width: max(300px, 100%);
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.main .about-school span {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    line-height: 29px;
+    position: relative;
+    padding-bottom: 20px;
+}
+.main .about-school span::after {
+    content: "";
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    border-bottom: 3px solid goldenrod;
+}
+.main .about-school p {
+    font-size: 14px;
+    line-height: 29px;
+}
+.main .about-school .img-container {
+    width: max(300px, 100%);
+    max-width: 800px;
+    overflow: hidden;
+    background-color: #ddd;
+}
+.main .about-school img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+@media (min-width: 800px){
+    .main .profile, .main .about-school, .main .more-about {
+        flex-wrap: nowrap;
+    }
+    .main .about-school {
+        flex-flow: row;
+    }
 }
